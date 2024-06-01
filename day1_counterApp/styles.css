@@ -23,12 +23,6 @@ html {
 
 body {
   font-family: 'Open Sans', sans-serif;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
 }
 
 p {
@@ -44,13 +38,16 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
-}
-
-#counter_space {
-  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
 #counter {
+  position: relative;
   width: 30rem;
   height: 10rem;
   display: flex;

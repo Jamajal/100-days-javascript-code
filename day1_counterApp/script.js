@@ -1,41 +1,39 @@
-const addButton = document.querySelector('#add');
-const subButton = document.querySelector('#sub');
-const resetButton = document.querySelector('#reset');
 const counterNumber = document.querySelector('#counter_number');
+const buttonsParent = document.querySelector('#counter');
 
 const ajustTextColor = (value) => {
   if (value > 0) {
-    counterNumber.classList.add('positive');
-    counterNumber.classList.remove('negative');
+    counterNumber.style.color = 'rgb(44, 255, 44)';
   } else if (value < 0) {
-    counterNumber.classList.remove('positive');
-    counterNumber.classList.add('negative');
+    counterNumber.style.color = 'rgb(254, 56, 56)';
   } else {
-    counterNumber.classList.remove('positive');
-    counterNumber.classList.remove('negative');
+    counterNumber.style.color = 'white';
   }
 };
 
 const addButtonEvent = () => {
-  const currentNumber = parseInt(counterNumber.textContent);
-  counterNumber.textContent = currentNumber + 1;
-
-  ajustTextColor(currentNumber + 1);
+  counterNumber.innerHTML++;
+  ajustTextColor(counterNumber.innerHTML);
 };
 
 const subButtonEvent = () => {
-  const currentNumber = parseInt(counterNumber.textContent);
-  counterNumber.textContent = currentNumber - 1;
-
-  ajustTextColor(currentNumber - 1);
+  counterNumber.innerHTML--;
+  ajustTextColor(counterNumber.innerHTML);
 };
 
 const resetButtonEvent = () => {
-  counterNumber.textContent = 0;
-
+  counterNumber.innerHTML = 0;
   ajustTextColor(0);
 };
 
-addButton.addEventListener('click', addButtonEvent);
-subButton.addEventListener('click', subButtonEvent);
-resetButton.addEventListener('click', resetButtonEvent);
+const delegateEventsToChildren = (e) => {
+  if (e.target.id === 'add') {
+    addButtonEvent();
+  } else if (e.target.id === 'sub') {
+    subButtonEvent();
+  } else if (e.target.id === 'reset') {
+    resetButtonEvent();
+  }
+};
+
+buttonsParent.addEventListener('click', (e) => delegateEventsToChildren(e));
