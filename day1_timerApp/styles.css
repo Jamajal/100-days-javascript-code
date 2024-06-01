@@ -49,6 +49,7 @@ img {
   height: 13rem;
   background-color: rgb(211, 208, 208);
   border-radius: 10%;
+  box-shadow: 0 0 0.5rem rgb(77, 77, 77);
 }
 
 #upper_space {
@@ -88,6 +89,21 @@ img {
   width: 7rem;
   border: none;
   border-radius: 0.5rem;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.2rem rgb(111, 111, 111);
+}
+
+#buttons_area button:hover {
+  font-weight: 700;
+  background-color: #949494;
+  color: white;
+}
+
+#buttons_area button:focus {
+  font-weight: 700;
+  background-color: #6b6b6b;
+  color: white;
+  box-shadow: none;
 }
 
 .on {

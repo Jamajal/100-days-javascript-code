@@ -42,10 +42,6 @@ const handleTime = () => {
 };
 
 const playEffect = () => {
-  playButton.classList.add('on');
-  pauseButton.classList.remove('on');
-  resetButton.classList.remove('on');
-
   if (!isPlaying) {
     isPlaying = true;
 
@@ -60,20 +56,12 @@ const playEffect = () => {
 
 const pauseEffect = () => {
   if (isPlaying) {
-    playButton.classList.remove('on');
-    pauseButton.classList.add('on');
-    resetButton.classList.remove('on');
-
     isPlaying = false;
     clearInterval(intervalId);
   }
 };
 
 const resetEffect = () => {
-  playButton.classList.remove('on');
-  pauseButton.classList.remove('on');
-  resetButton.classList.add('on');
-
   isPlaying = false;
   seconds = 0;
   minutes = 0;

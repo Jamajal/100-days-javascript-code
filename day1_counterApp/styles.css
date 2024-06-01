@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+#counter_space {
+  position: relative;
+}
+
+#counter {
+  width: 30rem;
+  height: 10rem;
+  display: flex;
+  color: white;
+}
+
+#sub {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border: none;
+  border-radius: 1rem 0 0 1rem;
+  cursor: pointer;
+  background-color: rgb(228, 72, 72);
+  color: white;
+}
+
+#sub:hover {
+  transition-duration: 0.1s;
+  font-size: 6rem;
+  background-color: rgb(252, 102, 102);
+}
+
+#counter_number {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 5rem;
+  font-weight: 700;
+  background-color: rgb(88, 88, 88);
+}
+
+#add {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  border: none;
+  border-radius: 0 1rem 1rem 0;
+  cursor: pointer;
+  background-color: rgb(89, 201, 89);
+  color: white;
+}
+
+#add:hover {
+  transition-duration: 0.1s;
+  font-size: 6rem;
+  background-color: rgb(114, 230, 114);
+}
+
+#reset {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translateY(-4rem);
+  font-size: 3rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: red;
+}
+
+#reset:hover {
+  color: rgb(250, 114, 114);
+}
+
+.positive {
+  color: rgb(44, 255, 44);
+}
+
+.negative {
+  color: rgb(254, 56, 56);
+}
