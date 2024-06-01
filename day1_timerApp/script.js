@@ -1,7 +1,6 @@
+// globals
 const counterNumber = document.querySelector('#content');
-const playButton = document.querySelector('#play');
-const pauseButton = document.querySelector('#pause');
-const resetButton = document.querySelector('#reset');
+const buttons = document.querySelector('#buttons');
 
 let seconds = 0;
 let minutes = 0;
@@ -9,6 +8,7 @@ let hours = 0;
 let isPlaying = false;
 let intervalId;
 
+// Backup functions
 const formatCounter = () => {
   if (seconds < 10 && seconds.toString().length < 2) {
     seconds = '0' + seconds;
@@ -41,7 +41,8 @@ const handleTime = () => {
   }
 };
 
-const playEffect = () => {
+// main functions
+const playButtonEvent = () => {
   if (!isPlaying) {
     isPlaying = true;
 
@@ -54,14 +55,14 @@ const playEffect = () => {
   }
 };
 
-const pauseEffect = () => {
+const pauseButtonEvent = () => {
   if (isPlaying) {
     isPlaying = false;
     clearInterval(intervalId);
   }
 };
 
-const resetEffect = () => {
+const resetButtonEvent = () => {
   isPlaying = false;
   seconds = 0;
   minutes = 0;
@@ -70,8 +71,16 @@ const resetEffect = () => {
   clearInterval(intervalId);
 };
 
-playButton.addEventListener('click', playEffect);
-pauseButton.addEventListener('click', pauseEffect);
-resetButton.addEventListener('click', resetEffect);
+const delegateChildrenEvents = (e) => {
+  if (e.target.id === 'play') {
+    playButtonEvent();
+  } else if (e.target.id === 'pause') {
+    pauseButtonEvent();
+  } else if (e.target.id === 'reset') {
+    resetButtonEvent();
+  }
+};
 
+// showtime
 counterNumber.innerHTML = formatCounter();
+buttons.addEventListener('click', (e) => delegateChildrenEvents(e));

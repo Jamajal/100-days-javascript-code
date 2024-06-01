@@ -1,6 +1,8 @@
+// globals
 const counterNumber = document.querySelector('#counter_number');
 const buttonsParent = document.querySelector('#counter');
 
+// backup functions
 const ajustTextColor = (value) => {
   if (value > 0) {
     counterNumber.style.color = 'rgb(44, 255, 44)';
@@ -11,6 +13,7 @@ const ajustTextColor = (value) => {
   }
 };
 
+// main functions
 const addButtonEvent = () => {
   counterNumber.innerHTML++;
   ajustTextColor(counterNumber.innerHTML);
@@ -36,4 +39,5 @@ const delegateEventsToChildren = (e) => {
   }
 };
 
+// showtime
 buttonsParent.addEventListener('click', (e) => delegateEventsToChildren(e));
