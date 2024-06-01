@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 
 :root {
   --white: #fff;
@@ -22,7 +22,11 @@ html {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Open Sans', sans-serif;
 }
 
 p {
@@ -38,4 +42,56 @@ img {
   max-width: 900px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+#counter {
+  width: 30rem;
+  height: 13rem;
+  background-color: rgb(211, 208, 208);
+  border-radius: 10%;
+}
+
+#upper_space {
+  height: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#visor {
+  width: 85%;
+  height: 5rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #474848;
+  color: white;
+  border-radius: 1rem;
+}
+
+#bottom_space {
+  height: 50%;
+  width: 100%;
+}
+
+#buttons_area {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+}
+
+#buttons_area button {
+  padding: 0.5rem 1rem;
+  width: 7rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.on {
+  font-weight: 700;
+  background-color: #929494;
+  color: white;
 }
