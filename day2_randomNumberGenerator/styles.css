@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+
+:root {
+  --white: #fff;
+  --black: #1c2b2d;
+  --blue: #31326f;
+  --light-blue: #005490;
+  --color-primary: #9d0191;
+  --color-sec: #db6400;
+  --grey: #eee;
+  --dark-grey: #222831;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  padding: 2rem;
+  border-radius: 1rem;
+  background-color: rgb(205, 203, 203);
+}
+
+.app > h1 {
+  text-align: center;
+}
+
+.visor {
+  height: 3rem;
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: large;
+  font-weight: 700;
+  border-radius: 0.4rem;
+  background-color: rgb(80, 80, 80);
+  color: white;
+}
+
+.input-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.input-options > input {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  font-size: small;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.input-options > button {
+  padding: 0.5rem 1.5rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+
+.input-options > button:hover {
+  background-color: gray;
+  color: white;
+}
+
+.messages {
+  position: relative;
+  height: 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+.error {
+  position: absolute;
+  font-size: small;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(243, 59, 59);
+}
+
+.success {
+  position: absolute;
+  font-size: small;
+  font-weight: 700;
+  text-align: center;
+  color: rgb(69, 199, 69);
+}

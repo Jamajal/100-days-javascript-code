@@ -8,7 +8,7 @@ let hours = 0;
 let isPlaying = false;
 let intervalId;
 
-// Backup functions
+// backup functions
 const formatCounter = () => {
   if (seconds < 10 && seconds.toString().length < 2) {
     seconds = '0' + seconds;
